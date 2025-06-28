@@ -1,6 +1,6 @@
 # Use a lightweight Node.js image as the base.
 # 'alpine' variants are smaller, good for production.
-# For development, you might sometimes use a larger base like 'node:20' (without alpine) if you need more build tools.
+# For development, you might sometimes use a larger base like 'node:24' (without alpine) if you need more build tools.
 FROM node:24
 
 WORKDIR /app
