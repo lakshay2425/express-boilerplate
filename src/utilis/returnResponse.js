@@ -1,7 +1,7 @@
 //Function to return error/success response
-export const returnResponse = (message, type, res, statusCode, additionalFields={})=>{
+export const returnResponse = (message,  res, statusCode, additionalFields={})=>{
     return res.status(statusCode).json({
-        success: type == "success",
+        success: true,
         message: message,
         ...additionalFields
     })

@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon server.js",
-    "prepare": "husky",
+    "dev": "npx nodemon --env-file=.env server.js",
+    "prepare": "husky install",
     "lint": "eslint . "
   },
   "keywords": [],
