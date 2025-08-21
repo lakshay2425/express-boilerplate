@@ -15,8 +15,15 @@ export const dbOperation = async (operation, errorMessage) => {
     }
 };
 
+//Custom Error with statusCode (works with your global handler)
+export const createError = (message, statusCode = 500) => {
+    const error = new Error(message);
+    error.statusCode = statusCode;
+    return error;
+};
+
 //External service wrapper
-const serviceOperation = async (operation, errorMessage) => {
+export const serviceOperation = async (operation, errorMessage) => {
     try {
         return await operation();
     } catch (error) {
