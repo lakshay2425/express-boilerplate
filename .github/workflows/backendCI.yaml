@@ -1,4 +1,4 @@
-name: resourceManagerBackend CI
+name: resourceManagerBackendCI
 
 on:
   push:
@@ -19,5 +19,5 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
+    - run: npm i
     - run: npm run lint
