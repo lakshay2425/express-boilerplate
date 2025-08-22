@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx nodemon --env-file=.env server.js",
     "prepare": "husky install",
-    "lint": "eslint . "
+    "lint": "eslint . ",
+    "build": "node --env-file=.env server.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
     "@eslint/js": "^9.29.0",
     "eslint": "^9.29.0",
     "globals": "^16.2.0",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.10"
   }
 }
