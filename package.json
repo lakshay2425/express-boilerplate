@@ -5,25 +5,33 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon --env-file=.env server.js",
+    "dev": "nodemon --exec node --loader ts-node/esm ./server.ts",
     "prepare": "husky",
     "lint": "eslint . ",
-    "build": "node --env-file=.env server.js"
+    "build": "tsc",
+    "start": "node --env-file=.env dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.48.0",
+    "@typescript-eslint/parser": "^8.48.0",
     "express": "^5.1.0",
     "http-error": "^0.0.6",
     "mongoose": "^8.16.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
-    "eslint": "^9.29.0",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
     "globals": "^16.2.0",
     "husky": "^9.1.7",
-    "nodemon": "^3.1.10"
+    "jiti": "^2.6.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
