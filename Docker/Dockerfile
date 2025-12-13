@@ -18,10 +18,13 @@ COPY --from=builder /app/node_modules ./node_modules
 
 COPY --from=builder /app ./
 
-RUN addgroup -S appgroup && adduser -S -G appgroup -h /home/appuser appuser
+COPY Docker/entrypoint.sh /entrypoint.sh
 
+RUN chmod +x /entrypoint.sh
 
-RUN chown -R appuser:appgroup /app
+RUN addgroup -S appgroup && adduser -S -G appgroup -h /home/appuser appuser && chown -R appuser:appgroup /app
+
+ENTRYPOINT ["/entrypoint.sh"]
 
 USER appuser
 
