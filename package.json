@@ -17,6 +17,7 @@
   "dependencies": {
     "express": "^5.1.0",
     "http-error": "^0.0.6",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^8.16.0"
   },
   "devDependencies": {
