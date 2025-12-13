@@ -1,3 +1,3 @@
 #!/bin/sh
-env | grep -v "no_proxy" > /app/.env
+env | grep -v "no_proxy" > /app/.env.production
 exec "$@"
