@@ -16,9 +16,10 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
-    "http-error": "^0.0.6",
+    "http-errors": "^2.0.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^8.16.0"
+    "mongoose": "^8.16.0",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
