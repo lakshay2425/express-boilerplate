@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon --env-file=.env server.js",
+    "dev": "npx nodemon --env-file=.env.development server.js",
     "prepare": "husky",
     "lint": "eslint . ",
-    "build": "node --env-file=.env server.js"
+    "build": "node --env-file=.env.production server.js"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +25,6 @@
     "@eslint/js": "^9.29.0",
     "eslint": "^9.29.0",
     "globals": "^16.2.0",
-    "husky": "^9.1.7",
-    "nodemon": "^3.1.10"
+    "husky": "^9.1.7"
   }
 }
