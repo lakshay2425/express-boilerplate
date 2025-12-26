@@ -1,14 +1,20 @@
 import * as z from 'zod'
 import mongoose from 'mongoose'
 import createHttpError from 'http-errors'
+import type { NextFunction, Request, Response } from 'express'
 
 
 const objectIdSchema = z.string().refine((val) => mongoose.Types.ObjectId.isValid(val), {
   message: 'Invalid ObjectId format',
 })
 
-export const validateObjectId = ({paramName, type}) => {
-    return async (req, res, next) => {
+interface ValidateObjectIdParameters {
+    paramName: string;
+    type: 'params' | 'body' | 'query';
+}
+
+export const validateObjectId = ({paramName, type}:ValidateObjectIdParameters) => {
+    return async (req:Request, res:Response, next:NextFunction) => {
         const ObjectId = req[type][paramName];
         if(!ObjectId) return next(createHttpError(400, `Missing objectId`));
         const result = objectIdSchema.safeParse(ObjectId);

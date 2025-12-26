@@ -1,4 +1,4 @@
-export const validateMissingFields = (fieldsToCheck) => {
+export const validateMissingFields = (fieldsToCheck:string| object):boolean => {
     if (typeof fieldsToCheck !== 'object' || fieldsToCheck === null) {
         // Handle the case where a single variable is passed
         return fieldsToCheck === undefined || fieldsToCheck === null;
