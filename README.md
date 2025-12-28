@@ -57,7 +57,7 @@ express-boilerplate/
 
 ### TL;DR (Quick Start)
 ```bash
-git clone && cd express-boilerplate && npm install && cp .env.sample .env.development && ...
+git clone <repository-url> && cd express-boilerplate && npm install && cp .env.sample .env.development && npm run dev
 ```
 
 For the impatient: This gets you running in 30 seconds. Configure `.env.development` fully for production-ready setup.
