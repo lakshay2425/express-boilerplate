@@ -1,6 +1,6 @@
 # Express Boilerplate
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/) [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)](https://nodejs.org/) [![License](https://img.shields.io/badge/license-ISC-blue)](LICENSE) [![CI](https://github.com/yourusername/express-boilerplate/workflows/Backend%20CI/badge.svg)](https://github.com/yourusername/express-boilerplate/actions)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/) [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green)](https://nodejs.org/) [![License](https://img.shields.io/badge/license-ISC-blue)](LICENSE)
 
 A robust and scalable Express.js boilerplate with TypeScript, modern development practices, and production-ready patterns.
 
